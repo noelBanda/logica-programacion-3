@@ -6,6 +6,7 @@ const lr = lector.createInterface({
   salida: process.stdout
 });
 
+//Funcion que solicita el numero 
 function solicitarNumero() {
   return new Promise((resolve) => {
     lr.question("Ingresa un número para calcular su factorial: ", (valor) => {
@@ -19,6 +20,7 @@ function solicitarNumero() {
   });
 }
 
+//Funcion que calcula el factorial
 function calcularFactorial(n) {
   if (n < 0) {
     console.error("❌ El factorial no está definido para números negativos.");
@@ -31,6 +33,7 @@ function calcularFactorial(n) {
   return resultado;
 }
 
+//Ejecucion del programa
 async function main() {
   let numero = null;
   // Repetimos hasta que el usuario ingrese un número válido
